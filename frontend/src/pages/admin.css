@@ -1,0 +1,25 @@
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-table th {
+  background: #0d6efd;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table tr:hover {
+  background: #f5f8ff;
+}
+
+.admin-table td:nth-child(2) {
+  word-break: break-word;
+}

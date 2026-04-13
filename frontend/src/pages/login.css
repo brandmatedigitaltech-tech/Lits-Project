@@ -1,0 +1,145 @@
+/* ===== PAGE BACKGROUND ===== */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* ===== LOGIN BOX ===== */
+.login-form {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+
+  padding: 35px;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+
+  text-align: center;
+  color: white;
+}
+/* ===== CENTER TEXT ===== */
+.login-card h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.login-link {
+  text-align: center;
+  width: 100%;
+}
+/* ===== SELECT FIX ===== */
+.login-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;   /* text visible */
+
+  outline: none;
+  cursor: pointer;
+}
+
+/* OPTION FIX (IMPORTANT) */
+.login-form select option {
+  color: black;   /* dropdown text visible */
+  background: white;
+}
+
+/* ===== TITLE ===== */
+.login-page h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* ===== SELECT ===== */
+.login-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.1);
+
+  background: transparent;
+  color: white;
+}
+
+/* ===== INPUT ===== */
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.1);
+
+  background: transparent;
+  color: white;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-form input::placeholder {
+  color: #aaa;
+}
+
+/* 🔥 FOCUS EFFECT */
+.login-form input:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 0 0 2px rgba(0,198,255,0.2);
+}
+
+/* ===== BUTTON ===== */
+.login-form button {
+  width: 100%;
+  padding: 14px;
+
+  border-radius: 30px;
+  border: none;
+
+  background: linear-gradient(135deg, #4facfe, #00c6ff);
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  margin-top: 10px;
+
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,198,255,0.4);
+}
+
+
+/* ===== ERROR ===== */
+.error {
+  color: #ff6b6b;
+  font-size: 14px;
+}
+
+/* ===== SIGNUP LINK ===== */
+.login-page p {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.login-page span {
+  color: #4facfe;
+  cursor: pointer;
+  font-weight: 600;
+}

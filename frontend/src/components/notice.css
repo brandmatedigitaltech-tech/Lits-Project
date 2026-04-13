@@ -1,0 +1,53 @@
+.notice-section {
+  padding: 60px 20px;
+  background: #f7f9fc;
+}
+
+.notice-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.notice-title span {
+  color: #0d6efd;
+}
+
+/* GRID */
+.notice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.notice-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  border-left: 5px solid #0d6efd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.notice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.notice-card h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.notice-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .notice-grid {
+    grid-template-columns: 1fr;
+  }
+}
