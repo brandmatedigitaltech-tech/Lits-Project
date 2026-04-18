@@ -1,0 +1,222 @@
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+  padding: 60px 0 100px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start; /* 🔥 FIX alignment */
+}
+
+/* ================= LEFT CARDS ================= */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-card {
+  padding: 22px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e5ecff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  display: flex;
+  gap: 16px;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateX(6px);
+  border-color: #0d6efd;
+}
+
+.contact-card-icon {
+  min-width: 48px; /* 🔥 FIX */
+  height: 48px;
+  border-radius: 14px;
+  background: #e7f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d6efd;
+  font-size: 20px;
+}
+
+/* ================= MAP ================= */
+.map-block {
+  margin-top: 20px;
+  height: 200px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,#e7f0ff,#dbeafe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* ================= FORM ================= */
+.form-block {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #e5ecff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.form-subtitle {
+  margin-bottom: 20px;
+  color: #6b7a90;
+}
+
+/* 🔥 IMPORTANT FIX */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ================= INPUT GROUP ================= */
+.form-group {
+  margin-bottom: 0; /* 🔥 remove extra spacing */
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================= INPUT ================= */
+.form-input,
+.form-select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #e5ecff;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+  box-sizing: border-box; /* 🔥 FIX OVERFLOW */
+}
+
+/* 🔥 FIX ALIGNMENT */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+/* ================= FOCUS ================= */
+.form-input:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13,110,253,0.1);
+}
+
+/* ================= TEXTAREA ================= */
+textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* ================= BUTTON ================= */
+.full-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ================= NOTE ================= */
+.form-note {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #6b7a90;
+}
+
+/* ================= POPUP ================= */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+
+  animation: scaleUp 0.3s ease;
+}
+
+.popup-box h3 {
+  color: #28a745;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.popup-box p {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+.popup-box button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-box button:hover {
+  background: #084298;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column; /* 🔥 FIX MOBILE */
+  }
+}

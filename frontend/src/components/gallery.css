@@ -1,0 +1,58 @@
+/* SECTION */
+.gallery {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.gallery-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel {
+  overflow: hidden;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TRACK */
+.carousel-track {
+  display: flex;
+  transition: transform 1s ease; /* smooth slow */
+}
+
+/* EACH CARD */
+.carousel-item {
+  min-width: calc(100% / 3);  /* 🔥 EXACT 3 ITEMS */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* IMAGE */
+.carousel-item img {
+  width: 100%;
+  height: 200px;   /* 🔥 FIX SIZE */
+  object-fit: cover;
+  border-radius: 12px;
+
+  transition: 0.4s;
+}
+
+/* HOVER */
+.carousel-item img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .carousel-item {
+    min-width: 100%;
+  }
+
+  .carousel-item img {
+    height: 180px;
+  }
+}

@@ -1,0 +1,157 @@
+.footer {
+  background: linear-gradient(135deg, #0a2540, #0d2f5b);
+  color: #fff;
+  padding-top: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* LOGO */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 5px;
+}
+
+.footer-logo h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* TEXT */
+.footer-col p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* HEADINGS */
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* LINKS */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-col ul li:hover {
+  color: #0d6efd;
+  transform: translateX(5px);
+}
+
+/* CONTACT */
+.contact li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: #0d6efd;
+  transform: translateY(-4px);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-links span {
+  margin-left: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #cbd5e1;
+}
+
+.footer-links span:hover {
+  color: #0d6efd;
+}
+
+/* DEV */
+.footer-dev {
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  background: rgba(0,0,0,0.2);
+}
+
+.footer-dev span {
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
