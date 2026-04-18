@@ -35,19 +35,17 @@ function Login() {
       const data = await res.json();
 
       if (data.success) {
-        // ✅ SAVE USER + ROLE
         localStorage.setItem("user", JSON.stringify(data.user));
         localStorage.setItem("role", data.role);
 
         setUserRole(data.role);
         setPopup(true);
 
-        // ✅ AUTO REDIRECT
         setTimeout(() => {
           if (data.role === "admin") {
             navigate("/admin");
           } else {
-            navigate("/account"); // 🔥 CHANGED (better than /student)
+            navigate("/student");
           }
         }, 1500);
 
@@ -56,22 +54,22 @@ function Login() {
       }
 
     } catch (err) {
-      setError("Server not running ❌");
+      setError("Server Error ❌");
     }
   };
 
   return (
     <div className="login-page">
 
-      {/* ✅ LOGIN CARD */}
+      {/* ✅ CENTER CARD */}
       <div className="login-card">
 
-        <h2>Welcome Back 👋</h2>
+           <h2>Welcome Back 👋</h2>
 
         <form onSubmit={handleLogin} className="login-form">
 
           {/* ROLE */}
-          <select name="role" value={form.role} onChange={handleChange}>
+          <select name="role" onChange={handleChange}>
             <option value="student">Student Login</option>
             <option value="admin">Admin Login</option>
           </select>
@@ -81,7 +79,6 @@ function Login() {
             type="email"
             name="email"
             placeholder="Enter Email"
-            value={form.email}
             onChange={handleChange}
             required
           />
@@ -91,7 +88,6 @@ function Login() {
             type="password"
             name="password"
             placeholder="Enter Password"
-            value={form.password}
             onChange={handleChange}
             required
           />
@@ -111,7 +107,7 @@ function Login() {
 
       </div>
 
-      {/* ✅ SUCCESS POPUP */}
+      {/* POPUP */}
       {popup && (
         <div className="popup-overlay">
           <div className="popup-box">
@@ -123,7 +119,7 @@ function Login() {
                 if (userRole === "admin") {
                   navigate("/admin");
                 } else {
-                  navigate("/account"); // 🔥 SAME FIX HERE
+                  navigate("/student");
                 }
               }}
             >
